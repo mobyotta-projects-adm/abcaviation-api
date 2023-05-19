@@ -1,8 +1,9 @@
 <?php
 
+use App\Actions\Fortify\CreateNewUser;
+use App\Http\Controllers\Api\Auth\UserContoller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('login', [UserContoller::class, 'login']);
+Route::post('signup', [UserContoller::class, 'signup']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
