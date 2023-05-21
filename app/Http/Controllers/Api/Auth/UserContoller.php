@@ -59,4 +59,17 @@ class UserContoller extends Controller
     {
         return app(CreateNewUser::class)->create($request->all());
     }
+
+    /**
+     * Logout a user.
+     * @authenticated
+     * @response  { "success": "true"}
+     *  @response  status=401 { "message": "Unauthenticated." }
+     */
+
+    public function logout(Request $request)
+    {
+        $request->user()->currentAccessToken()->delete();
+        return ['success' => true];
+    }
 }
