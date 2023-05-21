@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Api\Auth;
+namespace App\Http\Controllers\Api;
 
 use App\Actions\Fortify\CreateNewUser;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 /**
  * @group Authentication
@@ -14,7 +13,7 @@ use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
  * APIs for managing users
  */
 
-class UserContoller extends Controller
+class AuthController extends Controller
 {
     /**
      * Login User
