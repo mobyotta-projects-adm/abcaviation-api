@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 /**
  * @group Authentication
  *
- * APIs for managing users
+ * APIs for authentication users
  */
 
 class AuthController extends Controller
