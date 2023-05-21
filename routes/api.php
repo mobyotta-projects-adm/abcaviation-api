@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', [UserContoller::class, 'login']);
 Route::post('signup', [UserContoller::class, 'signup']);
+
+@
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

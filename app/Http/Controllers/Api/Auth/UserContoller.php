@@ -52,7 +52,7 @@ class UserContoller extends Controller
      * @bodyParam password string required The password for the user.
      * @bodyParam password_confirmation string required Confirm Password.
      *
-     * @response  { "name": "John Doe", "email": "john.doe@example.com", "updated_at": "2023-05-19T07:49:33.000000Z", "created_at": "2023-05-19T07:49:33.000000Z", "id": 3, "profile_photo_url": "https://ui-avatars.com/api/?name=J+D&color=7F9CF5&background=EBF4FF" }
+     * @response  { "name": "John Doe", "email": "john.doe@example.com", "updated_at": "2023-05-19T07:49:33.000000Z", "created_at": "2023-05-19T07:49:33.000000Z", "id": 3, "profile_photo_url": "https://ui-avatars.com/api/?name=J+D&color=7F9CF5&background=EBF4FF" , "token": "......."}
      */
 
     public function signup(Request $request)
