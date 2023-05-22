@@ -24,4 +24,13 @@ class Business extends Model
 
         return $url;
     }
+
+    public function location()
+    {
+        return $this->hasMany(Location::class, 'business_id', 'id');
+    }
+
+    protected $hidden = [
+        'deleted_at',
+    ];
 }

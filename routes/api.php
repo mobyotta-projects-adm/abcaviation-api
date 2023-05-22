@@ -25,8 +25,19 @@ Route::post('signup', [AuthController::class, 'signup']);
     Route::post('logout', [AuthController::class, 'logout']);
     Route::resource('/users', UserController::class);
 
+    // business crud routes
     Route::post('business', [BusinessController::class, 'create'])->name('business.create');
     Route::get('business/{business}', [BusinessController::class, 'show'])->name('business.show');
     Route::patch('business/{business}', [BusinessController::class, 'update'])->name('business.update');
     Route::delete('business/{business}', [BusinessController::class, 'delete'])->name('business.delete');
+
+    // business location crud
+
+
+    Route::post('business/{business}/location', [BusinessController::class, 'createLocation'])->name('business.createLocation');
+    Route::get('business/{business}/location', [BusinessController::class, 'getAllLocation'])->name('business.getAllLocation');
+    Route::get('business/{business}/location/{location}', [BusinessController::class, 'getLocation'])->name('business.getLocation');
+    Route::patch('business/{business}/location/{location}', [BusinessController::class, 'updateLocation'])->name('business.updateLocation');
+    Route::delete('business/{business}/location/{location}', [BusinessController::class, 'deleteLocation'])->name('business.deleteLocation');
+    
 });
