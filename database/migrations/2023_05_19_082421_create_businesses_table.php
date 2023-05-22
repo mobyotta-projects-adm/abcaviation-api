@@ -21,14 +21,19 @@ return new class extends Migration
             $table->string("name");
             $table->string('profile_photo_path', 2048)->nullable();
 
-            $table->string("category");
-            $table->string("industry");
-            $table->string("size");
+            $table->string("category")->nullable();
+            $table->string("industry")->nullable();
 
-            $table->string("aim");
-            $table->string("payroll");
+            $table->string("country")->nullable(); // todo: use country table instead
+
+            $table->string("size")->nullable();
+
+            $table->string("aim")->nullable();
+            $table->string("payroll")->nullable();
 
             $table->string("notes")->nullable();
+
+            $table->string("url")->unique()->nullable();
 
 
             //sheduling tab
