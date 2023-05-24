@@ -70,6 +70,16 @@ class BusinessController extends Controller
         return $business;
     }
 
+    /**
+     * Retrieves all user business  
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function list(Request $request)
+    {
+        return Business::where('owner_id', $request->user()->id)->get();
+    }
+
 
     /**
      * Updates an existing business in the system
@@ -275,7 +285,4 @@ class BusinessController extends Controller
         }
         return response(['error' => 'Location not found'], 404);
     }
-
-
-    
 }

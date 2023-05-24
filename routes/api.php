@@ -26,6 +26,7 @@ Route::post('signup', [AuthController::class, 'signup']);
     Route::resource('/users', UserController::class);
 
     // business crud routes
+    Route::get('business', [BusinessController::class, 'list'])->name('business.list');
     Route::post('business', [BusinessController::class, 'create'])->name('business.create');
     Route::get('business/{business}', [BusinessController::class, 'show'])->name('business.show');
     Route::patch('business/{business}', [BusinessController::class, 'update'])->name('business.update');
