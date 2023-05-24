@@ -17,19 +17,19 @@ use Illuminate\Support\Facades\Route;
 class BusinessController extends Controller
 {
 
-    public function __construct()
-    {
+    // public function __construct()
+    // {
 
-        $this->middleware('auth');
-        $this->middleware(function ($request, $next) {
-            if ($this->checkOwnerShip())
-                return $next($request);
-            else {
-                response(['error' => 'You dont have permission to access this business'], 401)->send();
-                exit;
-            }
-        });
-    }
+    //     $this->middleware('auth');
+    //     $this->middleware(function ($request, $next) {
+    //         if ($this->checkOwnerShip())
+    //             return $next($request);
+    //         else {
+    //             response(['error' => 'You dont have permission to access this business'], 401)->send();
+    //             exit;
+    //         }
+    //     });
+    // }
 
     /**
      * Creates a new  business in the system
@@ -275,4 +275,7 @@ class BusinessController extends Controller
         }
         return response(['error' => 'Location not found'], 404);
     }
+
+
+    
 }
