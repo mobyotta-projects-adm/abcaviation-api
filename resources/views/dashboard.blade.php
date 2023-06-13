@@ -28,7 +28,7 @@
                     <div class="m-shiftStatus-buttons">
                         <div class="m-shiftStatus-buttons--scheduled">
                             <div class="btn-group btn-flex clearfix u-hidden--tablet u-hidden--mobile">
-                                <button class="btn btn-success js-myWeek-startShift" data-dp-analytics="DMWS">Start
+                                <button class="btn btn-success js-myWeek-startShift" onclick="togleModal()" >Start
                                     Shift</button>
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
                                     aria-expanded="false">
@@ -43,8 +43,8 @@
                                 </ul>
                             </div>
                             <div class="btn-group btn-flex clearfix u-hidden--desktop">
-                                <button class="btn btn-success btn-sm js-myWeek-startShift"
-                                    data-dp-analytics="DMWS">Start Shift</button>
+                                <button class="btn btn-success btn-sm js-myWeek-startShift" id="startShift" onclick="togleModal()"
+                                    >Start Shift</button>
                                 <button type="button" class="btn btn-success btn-sm dropdown-toggle"
                                     data-toggle="dropdown" aria-expanded="false">
                                     <span class="caret"></span>
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                         <div class="m-shiftStatus-buttons--unscheduled">
-                            <button class="btn btn-success js-myWeek-Start-Unrostered" data-dp-analytics="DMWS">Start
+                            <button class="btn btn-success js-myWeek-Start-Unrostered"  onclick="togleModal()" >Start
                                 Shift</button>
                         </div>
                         <div class="m-shiftStatus-buttons--inProgress">
@@ -4426,4 +4426,60 @@
 
         </div>
     </div>
+
+    <div id="shift-modal-unscheduled" class="modal modal--tiny in" aria-hidden="false" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close"><span
+                            class="di-cross" aria-hidden="true"></span></button>
+                    <h2 class="modal-title">Start unscheduled shift</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="padding">
+                        <div class="select2-container" id="s2id_shift-modal-unscheduled-area"><a
+                                href="javascript:void(0)" class="select2-choice" tabindex="-1"> <span
+                                    class="select2-chosen" id="select2-chosen-9">[139] DHL-Q-077(Polar park
+                                    Ass)-Op's</span><abbr class="select2-search-choice-close"></abbr> <span
+                                    class="select2-arrow co-icon-caret-down" role="presentation"></span></a><label
+                                for="s2id_autogen9" class="select2-offscreen"></label><input
+                                class="select2-focusser select2-offscreen" type="text" aria-haspopup="true"
+                                role="button" aria-labelledby="select2-chosen-9" id="s2id_autogen9"></div><input
+                            id="shift-modal-unscheduled-area" data-placeholder="Select an area..." tabindex="-1"
+                            title="" style="display: none;">
+                    </div>
+                </div>
+                <div id="unrosteredTimesheetCustomFields" class="u-padding-15-sides margin-none"></div>
+                <div class="u-flex u-flex-center form-group row js-MyWeek-Start-Modal-Container u-padding-15-sides margin-none"
+                    style="display: none;">
+                    <div class="col-xs-12">
+                        <label id="MyWeek-Start-Modal-Comment" class="pb5">Comment</label>
+                        <textarea class="form-control" maxlength="255" data-min-rows="2"></textarea>
+                        <span class="error-message">This field is required.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal" onclick="togleModal()">Cancel</button>
+                    <button class="btn btn-primary" type="button" data-loading-text="Starting..." onclick="togleModal()"
+                        id="shift-modal-unscheduled-start">Start Shift</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal element
+        // Add event listener to the button
+        function togleModal() {
+        const modal = document.getElementById("shift-modal-unscheduled");
+
+            // Toggle the modal display property
+            if (modal.style.display === "block") {
+                modal.style.display = "none";
+            } else {
+                modal.style.display = "block";
+            }
+        };
+    </script>
+
 </x-app-layout>
