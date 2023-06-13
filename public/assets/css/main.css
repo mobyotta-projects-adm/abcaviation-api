@@ -1,6 +1,8 @@
 :root {
-    --theme-color: #6657b8;
-    --theme-color-darker-30: #48399a;
+    --theme-color: #5F789A;
+    --theme-color-darker-30: #3d77c7;
+
+    --co-accent-primary: #5F789A;
 }
 
 header.m-topHeader {
@@ -13329,4 +13331,19 @@ span.announcekit-booster-bar-cta {
 }
 
 sentinel {
+}
+
+:root {
+    --theme-color: #5F789A;
+    --theme-color-darker-30: #3d77c7;
+
+    --co-accent-primary: #3d77c7;
+    --co-text-highlight: #3d77c7;
+    --co-unavailable-border: #3d77c7;
+    --co-button-secondary-text: #3d77c7;
+    --co-button-primary-fill: #3d77c7;
+    --co-shift-open-border: #3d77c7;
+}
+.btn.btn-primary {
+    background : var(--co-button-primary-fill)
 }
