@@ -33,6 +33,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     {{-- @vite(['resources/js/app.js']) --}}
     @livewireStyles
+
+    @stack('head')
 </head>
 <!-- [Head] end -->
 <!-- [Body] Start -->
@@ -45,10 +47,10 @@
         <div class="pc-content">
             @include('partials.breadcrumb')
             <!-- [ Main Content ] start -->
-           <main>
-            {{ $slot }}
-           </main>
-          
+            <main>
+                {{ $slot }}
+            </main>
+
             <!-- [ Main Content ] end -->
         </div>
     </div>
@@ -56,10 +58,10 @@
     @include('partials.footer-block')
     @include('partials.footer-js')
 
-
     <script src="{{ asset('assets/js/layout-horizontal.js') }}"></script>
 
     @stack('body')
+
     @livewireScripts
 </body>
 <!-- [Body] end -->

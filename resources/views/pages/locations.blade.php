@@ -21,4 +21,12 @@
         <!-- [ sample-page ] end -->
     </div>
 
+
+
+    @push('body')
+        <script>
+            console.log("hi")
+        </script>
+    @endpush
+
 </x-app-layout>
