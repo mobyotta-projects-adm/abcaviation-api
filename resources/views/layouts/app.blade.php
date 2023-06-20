@@ -37,6 +37,12 @@
     @stack('body')
 
     @livewireScripts
+
+    <style>
+        .scroll-block {
+            overflow: scroll;
+        }
+    </style>
 </body>
 <!-- [Body] end -->
 
