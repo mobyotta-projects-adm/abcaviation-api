@@ -17,7 +17,7 @@
                               <th>Contact</th>
                               <th>Orders</th>
                               <th>Spent</th>
-                              <th>Status</th>
+                              <th>Role</th>
                               <th class="text-center">Actions</th>
                             </tr>
                           </thead>
