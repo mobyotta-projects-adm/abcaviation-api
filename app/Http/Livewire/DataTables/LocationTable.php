@@ -13,7 +13,7 @@ class LocationTable extends DataTableComponent
     public function configure(): void
     {
         $this->setPrimaryKey('id');
-        $this->setColumnSelectDisabled();
+        // $this->setColumnSelectDisabled();
 
         $this->setConfigurableAreas([
 
@@ -24,14 +24,15 @@ class LocationTable extends DataTableComponent
 
         ]);
     }
+    // Orca
 
     public function columns(): array
     {
         return [
             Column::make("Id", "id")
                 ->sortable(),
-            Column::make("Name")->sortable(),
-            Column::make("Address")->sortable(),
+            Column::make("Name")->sortable()->searchable(),
+            Column::make("Address")->sortable()->searchable(),
             Column::make('Actions', 'id')->format(function ($row) {
                 return '<a href="' . url('/location/edit/' . $row) . '" class="btn border-0" ><i class="fa fa-edit text-primary" aria-hidden="true"></i> Edit</button>';
             })->html(),

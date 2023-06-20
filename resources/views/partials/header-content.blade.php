@@ -12,90 +12,12 @@
                 <i class="ti ti-menu-2"></i>
             </a>
         </li>
-        <li class="dropdown pc-h-item">
-            <a class="pc-head-link dropdown-toggle arrow-none m-0 trig-drp-search" data-bs-toggle="dropdown"
-                href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                <svg class="pc-icon">
-                    <use xlink:href="#custom-search-normal-1"></use>
-                </svg>
-            </a>
-            <div class="dropdown-menu pc-h-dropdown drp-search">
-                <form class="px-3 py-2">
-                    <input type="search" class="form-control border-0 shadow-none" placeholder="Search here. . ." />
-                </form>
-            </div>
-        </li>
     </ul>
 </div>
 <!-- [Mobile Media Block end] -->
 <div class="ms-auto">
     <ul class="list-unstyled">
-        <li class="dropdown pc-h-item">
-            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
-                role="button" aria-haspopup="false" aria-expanded="false">
-                <svg class="pc-icon">
-                    <use xlink:href="#custom-sun-1"></use>
-                </svg>
-            </a>
-            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                <a href="#!" class="dropdown-item" onclick="layout_change('dark')">
-                    <svg class="pc-icon">
-                        <use xlink:href="#custom-moon"></use>
-                    </svg>
-                    <span>Dark</span>
-                </a>
-                <a href="#!" class="dropdown-item" onclick="layout_change('light')">
-                    <svg class="pc-icon">
-                        <use xlink:href="#custom-sun-1"></use>
-                    </svg>
-                    <span>Light</span>
-                </a>
-                <a href="#!" class="dropdown-item" onclick="layout_change_default()">
-                    <svg class="pc-icon">
-                        <use xlink:href="#custom-setting-2"></use>
-                    </svg>
-                    <span>Default</span>
-                </a>
-            </div>
-        </li>
-        <li class="dropdown pc-h-item">
-            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
-                role="button" aria-haspopup="false" aria-expanded="false">
-                <svg class="pc-icon">
-                    <use xlink:href="#custom-home"></use>
-                </svg>
-            </a>
-            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                <a href="#!" class="dropdown-item">
-                    <i class="ti ti-user"></i>
-                    <span>My Account</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                    <i class="ti ti-settings"></i>
-                    <span>Settings</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                    <i class="ti ti-headset"></i>
-                    <span>Support</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                    <i class="ti ti-lock"></i>
-                    <span>Lock Screen</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                    <i class="ti ti-power"></i>
-                    <span>Logout</span>
-                </a>
-            </div>
-        </li>
-        <li class="pc-h-item">
-            <a href="#" class="pc-head-link me-0" data-bs-toggle="offcanvas" data-bs-target="#announcement"
-                aria-controls="announcement">
-                <svg class="pc-icon">
-                    <use xlink:href="#custom-notification-status"></use>
-                </svg>
-            </a>
-        </li>
+
         <li class="dropdown pc-h-item">
             <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
                 role="button" aria-haspopup="false" aria-expanded="false">
