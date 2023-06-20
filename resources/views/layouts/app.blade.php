@@ -45,7 +45,7 @@
     <!-- [ Main Content ] start -->
     <div class="pc-container">
         <div class="pc-content">
-            @include('partials.breadcrumb')
+           
             <!-- [ Main Content ] start -->
             <main>
                 {{ $slot }}
