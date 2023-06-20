@@ -23,5 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $permission = new PermissionSeeder();
         $permission->run();
+
+        LocationSeeder::run();
     }
 }

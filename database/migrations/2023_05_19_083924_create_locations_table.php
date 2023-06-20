@@ -15,14 +15,10 @@ return new class extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('owner_id');
-            $table->foreign('owner_id')->references('id')->on('users');
-            $table->foreignId('business_id')->constrained();
-
             $table->string("name");
             $table->string("address");
-            $table->string("cordinates");
-
+            $table->string("cordinates")->nullable();
+            $table->string("start_week_day")->default("Monday");
             $table->timestamps();
             $table->softDeletes();
         });

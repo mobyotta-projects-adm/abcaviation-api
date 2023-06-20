@@ -12,11 +12,8 @@
                                 Location</button></div>
                     </div>
 
-
                 </div>
                 <div class="card-body">
-
-
                     <table class="table table-default">
                         <thead>
                             <tr>
@@ -49,11 +46,8 @@
                                     </div>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
-
-
                 </div>
             </div>
         </div>

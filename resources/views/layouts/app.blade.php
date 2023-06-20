@@ -1,10 +1,11 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
 
     @include('partials.head-meta')
     @include('partials.head-css')
-    {{-- @vite(['resources/js/app.js']) --}}
+    @vite(['resources/js/app.js'])
     @livewireStyles
 
     @stack('head')
