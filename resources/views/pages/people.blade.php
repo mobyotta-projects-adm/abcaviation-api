@@ -39,7 +39,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>45</td>
                               <td>$7,634 </td>
-                              <td><span class="badge bg-light-success rounded-pill f-12">Relationship</span> </td>
+                              <td><span class="badge bg-light-success rounded-pill f-12">Safety Manager</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
@@ -79,7 +79,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>42</td>
                               <td>$3,742</td>
-                              <td><span class="badge bg-light-primary rounded-pill f-12">Single</span> </td>
+                              <td><span class="badge bg-light-primary rounded-pill f-12">Process Technician</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
@@ -119,7 +119,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>20</td>
                               <td>$885</td>
-                              <td><span class="badge bg-light-danger rounded-pill f-12">Complicated</span> </td>
+                              <td><span class="badge bg-light-danger rounded-pill f-12">Packaging Engineer</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
@@ -159,7 +159,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>42</td>
                               <td>$3,742</td>
-                              <td><span class="badge bg-light-primary rounded-pill f-12">Single</span> </td>
+                              <td><span class="badge bg-light-primary rounded-pill f-12">Process Technician</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
@@ -199,7 +199,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>42</td>
                               <td>$3,742</td>
-                              <td><span class="badge bg-light-primary rounded-pill f-12">Single</span> </td>
+                              <td><span class="badge bg-light-primary rounded-pill f-12">Process Technician</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
@@ -239,7 +239,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>45</td>
                               <td>$7,634 </td>
-                              <td><span class="badge bg-light-success rounded-pill f-12">Relationship</span> </td>
+                              <td><span class="badge bg-light-success rounded-pill f-12">Safety Manager</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
@@ -279,7 +279,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>42</td>
                               <td>$3,742</td>
-                              <td><span class="badge bg-light-primary rounded-pill f-12">Single</span> </td>
+                              <td><span class="badge bg-light-primary rounded-pill f-12">Process Technician</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
@@ -319,7 +319,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>20</td>
                               <td>$885</td>
-                              <td><span class="badge bg-light-danger rounded-pill f-12">Complicated</span> </td>
+                              <td><span class="badge bg-light-danger rounded-pill f-12">Packaging Engineer</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
@@ -359,7 +359,7 @@
                               <td>+1 (247) 849-6968</td>
                               <td>42</td>
                               <td>$3,742</td>
-                              <td><span class="badge bg-light-primary rounded-pill f-12">Single</span> </td>
+                              <td><span class="badge bg-light-primary rounded-pill f-12">Process Technician</span> </td>
                               <td class="text-center">
                                 <ul class="list-inline me-auto mb-0">
                                   <li class="list-inline-item align-bottom" data-bs-toggle="tooltip" title="View">
