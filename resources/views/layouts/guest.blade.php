@@ -18,8 +18,7 @@
                 <div class="card my-5">
                     <div class="card-body">
                         <div class="text-center">
-                            <a href="{{ url('/') }}"><img src="<?= asset('assets/images/logo-dark.svg') ?>"
-                                    alt="img"></a>
+                            <a href="{{ url('/') }}"><h2>Orca</h2> </a>
                             {{ $slot }}
                         </div>
                     </div>

@@ -4,8 +4,8 @@
         <div class="m-header">
             <a href="{{ route('me') }}" class="b-brand">
                 <!-- ========   Change your logo from here   ============ -->
-                <h2 class="logo logo-lg"> Okra</h2>
-                <h2 class=" logo logo-sm"> Okra</h2>
+                <h2 class="logo logo-lg"> Orca</h2>
+                <h2 class=" logo logo-sm"> Orca</h2>
             </a>
         </div>
         <div class="tab-container">
