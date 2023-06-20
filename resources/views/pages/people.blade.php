@@ -13,7 +13,7 @@
                           <thead>
                             <tr>
                               <th>#</th>
-                              <th>Customer Name</th>
+                              <th> Name</th>
                               <th>Contact</th>
                               <th>Orders</th>
                               <th>Spent</th>
