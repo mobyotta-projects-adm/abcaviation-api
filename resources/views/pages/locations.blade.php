@@ -4,17 +4,56 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Locations card</h5>
+                    <div class="row">
+                        <div class="col text-left">
+                            <h5>Locations</h5>
+                        </div>
+                        <div class="col text-end text-right"> <button type="button" class="btn btn-primary btn-sm">Add
+                                Location</button></div>
+                    </div>
+
+
                 </div>
                 <div class="card-body">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    </p>
+
+
+                    <table class="table table-default">
+                        <thead>
+                            <tr>
+                                <th scope="col">Location Name </th>
+                                <th scope="col">Location Address </th>
+                                <th scope="col">Areas</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td scope="row">139 Office, Terminal 3</td>
+                                <td> Heathrow Terminal 3, TW6 1EW, London</td>
+                                <td style="max-width:300px; white-space : normal">DHL-Q-134(HHS) - DM, Planning ,
+                                    Training & Development, DHL-Q-071(Staff
+                                    Transport)-Dri, DHL-Q-076(Warehouse Ass)-Dri </td>
+                                <td>
+
+                                    <div class="dropdown open">
+                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button"
+                                            id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Actions
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                                            <button class="dropdown-item" href="#">Action</button>
+                                            <button class="dropdown-item disabled" href="#">Disabled
+                                                action</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
                 </div>
             </div>
         </div>

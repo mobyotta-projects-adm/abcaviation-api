@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 // Route::middleware([
@@ -29,7 +29,7 @@ Route::get('/', function () {
 // });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect('me');
 })->name('dashboard');
 
 Route::get('me', [DashboardController::class, 'me'])->name('me');
