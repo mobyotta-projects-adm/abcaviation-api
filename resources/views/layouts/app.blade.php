@@ -5,7 +5,7 @@
 
     @include('partials.head-meta')
     @include('partials.head-css')
-    {{-- @vite(['resources/js/app.js']) --}}
+    @vite(['resources/js/app.js'])
     @livewireStyles
 
     @stack('head')
