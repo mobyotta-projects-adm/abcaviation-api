@@ -32,7 +32,9 @@ class LocationTable extends DataTableComponent
                 ->sortable(),
             Column::make("Name")->sortable(),
             Column::make("Address")->sortable(),
-
+            Column::make('Actions', 'id')->format(function ($row) {
+                return '<a href="' . url('/location/edit/' . $row) . '" class="btn border-0" ><i class="fa fa-edit text-primary" aria-hidden="true"></i> Edit</button>';
+            })->html(),
         ];
     }
 

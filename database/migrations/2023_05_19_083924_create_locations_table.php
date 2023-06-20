@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string("address");
             $table->string("cordinates")->nullable();
             $table->string("start_week_day")->default("Monday");
+            $table->string("timezone")->default("Europe/London");
             $table->timestamps();
             $table->softDeletes();
         });

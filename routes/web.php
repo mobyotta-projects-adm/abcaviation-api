@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Livewire\DataTables\LocationTable;
+use App\Http\Livewire\Pages\EditLocation;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,3 +43,6 @@ Route::get('schedule', [DashboardController::class, 'schedule'])->name('schedule
 Route::get('approved-timesheet', [DashboardController::class, 'approved_timesheet'])->name('approved_timesheet');
 Route::get('export-timesheet', [DashboardController::class, 'export_timesheet'])->name('export_timesheet');
 Route::get('report', [DashboardController::class, 'report'])->name('report');
+
+
+Route::get('/location/edit/{location}', EditLocation::class)->name('editlocation');
