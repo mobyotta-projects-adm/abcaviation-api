@@ -76,7 +76,7 @@
                         <div class="">
                             <div class="card-body">
                                 {{-- Data Starts  --}}
-                                <h5 class="mb-3">Basic Pills</h5>
+                              
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
