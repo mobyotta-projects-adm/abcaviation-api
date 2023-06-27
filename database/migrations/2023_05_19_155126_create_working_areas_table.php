@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
          
             $table->foreignId('location_id')->constrained();
-            $table->string('position')->nullable();
+            $table->string('sort')->nullable();
             $table->string("name");
             $table->string("color");
             $table->string("export_code")->nullable();
