@@ -36,6 +36,7 @@
     @include('partials.footer-js')
 
     <script src="{{ asset('assets/js/layout-horizontal.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     @stack('body')
 
@@ -48,5 +49,6 @@
     </style>
 </body>
 <!-- [Body] end -->
+
 
 </html>
