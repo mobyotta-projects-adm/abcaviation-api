@@ -9,7 +9,6 @@
         <form wire:submit.prevent="submitForm" enctype="multipart/form-data"></form>
         <div class="row">
 
-
             <div class="col-md-6">
                 <x-jet-label for="name" value="{{ __('Name') }}" />
                 <div class="mb-3">

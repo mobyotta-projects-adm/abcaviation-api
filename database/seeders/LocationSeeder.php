@@ -27,6 +27,16 @@ class LocationSeeder extends Seeder
             'Saturday',
             'Sunday'
         ];
+        $data = [];
+        foreach ($weekdays as $weekday) {
+            $data[$weekday] = [
+                'is_open' => true,
+                'is_24hour' => false,
+                'start_time' => '09:00 AM',
+                'end_time' => '05:00 PM',
+            ];
+        }
+        $data = json_encode($data);
 
         foreach ($locations as $index => $name) {
 
@@ -34,7 +44,10 @@ class LocationSeeder extends Seeder
                 'name' => $name,
             ], [
                 'address' => $address[$index],
-                'start_week_day' => $weekdays[$index % 7]
+                'start_week_day' => $weekdays[$index % 7],
+                'operating_hours' =>
+                $data
+
             ]);
         }
     }

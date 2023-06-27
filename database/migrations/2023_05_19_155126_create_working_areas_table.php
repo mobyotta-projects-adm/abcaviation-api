@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('working_areas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('owner_id');
-            $table->foreign('owner_id')->references('id')->on('users');
-            $table->foreignId('business_id')->constrained();
-
+         
+            $table->foreignId('location_id')->constrained();
+            $table->string('position')->nullable();
             $table->string("name");
             $table->string("color");
             $table->string("export_code")->nullable();
