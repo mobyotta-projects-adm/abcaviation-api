@@ -53,9 +53,9 @@ class LocationAreasTable extends DataTableComponent
 
     public function reorder($items): void
     {
-        foreach ($items as $item) {
-            $this->model::find((int)$item['value'])->update(['position' => (int)$item['order']]);
-        }
+        // foreach ($items as $item) {
+        //     $this->model::find((int)$item['value'])->update(['position' => (int)$item['order']]);
+        // }
     }
 
 
