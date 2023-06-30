@@ -68,7 +68,7 @@ class LocationTable extends DataTableComponent
         $this->validate([
             'name' => 'required|string|max:255',
             'address' => 'required|string|max:255',
-            'start_week_day' => 'required|string|max:255',
+            'start_week_day' => 'required|max:255',
         ]);
 
         Location::insert([

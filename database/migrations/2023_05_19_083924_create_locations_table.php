@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("cordinates")->nullable();
             $table->string("start_week_day")->default("Monday");
             $table->string("timezone")->default("Europe/London");
-            $table->json("operating_hours");
+            $table->json("operating_hours")->nullable();
 
             //sheduling
             $table->integer("default_shift_duration")->default(8);

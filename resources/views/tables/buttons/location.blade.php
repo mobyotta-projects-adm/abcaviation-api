@@ -34,13 +34,13 @@
                 <div class="mb-3">
                     <select class="form-select form-select-lg" name="start_week_day" wire:model="start_week_day">
                         <option value="">Select</option>
-                        <option value="Monday">Monday</option>
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Wednesday">Wednesday</option>
-                        <option value="Thursday">Thursday</option>
-                        <option value="Friday">Friday</option>
-                        <option value="Saturday">Saturday</option>
-                        <option value="Sunday">Sunday</option>
+                        <option value="1">Mon</option>
+                        <option value="2">Tue</option>
+                        <option value="3">Wed</option>
+                        <option value="4">Thu</option>
+                        <option value="5">Fri</option>
+                        <option value="6">Sat</option>
+                        <option value="7">Sun</option>
                     </select>
                 </div>
                 <x-jet-input-error for="start_week_day" />
