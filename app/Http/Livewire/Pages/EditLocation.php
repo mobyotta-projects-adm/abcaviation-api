@@ -38,6 +38,7 @@ class EditLocation extends Component
 
         //sheduling information
         $this->week_start = $location->week_start;
+        $this->default_shift_duration = $location->default_shift_duration;
         $this->default_mealbreak_duration = $location->default_mealbreak_duration;
         $this->roster_prevent_change_hours = $location->roster_prevent_change_hours;
         $this->notification_on_shift_removed = $location->notification_on_shift_removed;
@@ -207,6 +208,7 @@ class EditLocation extends Component
 
     //select 
     public $week_start;
+    public $default_shift_duration;
     public $default_mealbreak_duration;
     public $roster_prevent_change_hours;
     public $notification_on_shift_removed;
