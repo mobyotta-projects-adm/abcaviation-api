@@ -44,4 +44,10 @@ class DashboardController extends Controller
     {
         return view('pages.report');
     }
+
+    public static function phoneNumberCodes()
+    {
+        $fileContents = file_get_contents(public_path('assets/numbers.json'));
+        return json_decode($fileContents);
+    }
 }
