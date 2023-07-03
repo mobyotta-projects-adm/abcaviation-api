@@ -5,6 +5,8 @@ namespace App\Exceptions;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Illuminate\Support\Str;
+
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -59,13 +61,15 @@ class Handler extends ExceptionHandler
                     'message' => "Resource not found: {$modelName}",
                 ],
             ], 404);
-            
         } elseif ($e instanceof NotFoundHttpException) {
-            return response()->json([
-                'error' => [
-                    'message' => 'Route not found',
-                ],
-            ], 404);
+
+            if (Str::contains($request->path(), 'api/'))
+
+                return response()->json([
+                    'error' => [
+                        'message' => 'Route not found',
+                    ],
+                ], 404);
         }
 
         return parent::render($request, $e);

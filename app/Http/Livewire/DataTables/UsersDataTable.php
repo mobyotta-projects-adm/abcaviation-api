@@ -44,6 +44,9 @@ class UsersDataTable extends DataTableComponent
             Column::make("Mobile", "profile.mobile")->sortable(),
             Column::make("Main Location", "profile.location.name")->sortable(),
             Column::make("Access Level", "profile.role")->sortable(),
+            Column::make('Actions', 'id')->format(function ($row) {
+                return '<a href="' . url('/user/edit/' . $row) . '" class="btn border-0" ><i class="fa fa-edit text-primary" aria-hidden="true"></i> Edit</button>';
+            })->html(),
 
         ];
     }
@@ -51,10 +54,11 @@ class UsersDataTable extends DataTableComponent
 
     public function builder(): Builder
     {
-        return $this->model::query();
-        // ->whereHas("roles", function ($q) {
-        //     $q->where("name", "!=", "admin");
-        // });
+        return $this->model::query()
+            ->whereHas("roles", function ($q) {
+                $q->where("name", "!=", "admin");
+            })
+            ->orWhereDoesntHave("roles");
     }
 
     public $countryCodes = [];
