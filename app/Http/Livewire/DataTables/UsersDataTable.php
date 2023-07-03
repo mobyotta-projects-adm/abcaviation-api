@@ -45,7 +45,8 @@ class UsersDataTable extends DataTableComponent
             Column::make("Main Location", "profile.location.name")->sortable(),
             Column::make("Access Level", "profile.role")->sortable(),
             Column::make('Actions', 'id')->format(function ($row) {
-                return '<a href="' . url('/user/edit/' . $row) . '" class="btn border-0" ><i class="fa fa-edit text-primary" aria-hidden="true"></i> Edit</button>';
+                return '<a href="' . url('/user/edit/personal/' . $row) . '" class="btn border-0" ><i class="fa fa-edit text-primary" aria-hidden="true"></i> Personal</button>' .
+                    '<a href="' . url('/user/edit/employment/' . $row) . '" class="btn border-0" ><i class="fa fa-edit text-primary" aria-hidden="true"></i> Employment</button>';
             })->html(),
 
         ];

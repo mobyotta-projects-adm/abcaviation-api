@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Livewire\DataTables\LocationTable;
 use App\Http\Livewire\DataTables\UsersDataTable;
 use App\Http\Livewire\Pages\EditLocation;
+use App\Http\Livewire\Pages\EditUserPersonal;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,10 +38,11 @@ Route::middleware([
     Route::get('newsfeed', [DashboardController::class, 'newsfeed'])->name('newsfeed');
     Route::get('tasks', [DashboardController::class, 'tasks'])->name('tasks');
     Route::get('location', LocationTable::class)->name('location');
-    Route::get('people',UsersDataTable::class)->name('people');
+    Route::get('people', UsersDataTable::class)->name('people');
     Route::get('schedule', [DashboardController::class, 'schedule'])->name('schedule');
     Route::get('approved-timesheet', [DashboardController::class, 'approved_timesheet'])->name('approved_timesheet');
     Route::get('export-timesheet', [DashboardController::class, 'export_timesheet'])->name('export_timesheet');
     Route::get('report', [DashboardController::class, 'report'])->name('report');
     Route::get('/location/edit/{location}', EditLocation::class)->name('editlocation');
+    Route::get('/user/edit/personal/{user}', EditUserPersonal::class)->name('editUser');
 });

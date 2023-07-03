@@ -2,6 +2,7 @@
 
 // $file = 'resources/views/livewire/pages/location/sections/sheduling.blade.php';
 $file = 'resources/views/tables/buttons/users.blade.php';
+$file = 'resources/views/livewire/pages/edit_user/personal/personal.blade.php';
 $html =  $inputHTML = file_get_contents($file);
 
 $pattern = '/wire:model=["\'](.*?)["\']/i';

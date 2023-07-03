@@ -25,5 +25,6 @@ class DatabaseSeeder extends Seeder
         $permission->run();
 
         LocationSeeder::run();
+        CountrySeeder::run();
     }
 }
