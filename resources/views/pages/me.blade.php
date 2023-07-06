@@ -14,7 +14,7 @@
                             <p class="card-text">No scheduled shifts</p>
 
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-success wid-115 rounded rounded-14"
+                            <button type="button" class="btn btn-primary wid-115 rounded rounded-14"
                                 data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Start Shift
                             </button>
