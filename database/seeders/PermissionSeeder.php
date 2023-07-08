@@ -19,6 +19,92 @@ class PermissionSeeder extends Seeder
      */
     public function run()
     {
+
+
+        $permissions = [
+            'view_shifts',
+            'start_shifts',
+            'clock_in_and_out',
+            'manage_tasks',
+            'post_to_news_feed',
+            'schedule_team_members',
+            'approve_timesheets',
+            'approve_leave_requests',
+            'create_journals',
+            'add_edit_team_members',
+            'view_team_member_costs',
+            'export_timesheets',
+            'access_reports',
+            'set_up',
+            'kiosk',
+            'edit_locations',
+            'manage_integrations',
+            'create_locations'
+        ];
+        foreach ($permissions as $permissionName) {
+            $permission = Permission::firstOrCreate(['name' => $permissionName]);
+        }
+
+
+        $roles = [
+            "employee" => [
+                'view_shifts',
+                'start_shifts',
+                'clock_in_and_out',
+                'manage_tasks',
+                'post_to_news_feed'
+            ],
+            "supervisor" => [
+                'view_shifts',
+                'start_shifts',
+                'clock_in_and_out',
+                'manage_tasks',
+                'post_to_news_feed',
+                'schedule_team_members',
+                'approve_timesheets',
+                'approve_leave_requests',
+                'create_journals',
+            ],
+            "location_manager" => [
+                'view_shifts',
+                'start_shifts',
+                'clock_in_and_out',
+                'manage_tasks',
+                'post_to_news_feed',
+                'schedule_team_members',
+                'approve_timesheets',
+                'approve_leave_requests',
+                'create_journals',
+                'add_edit_team_members',
+                'view_team_member_costs',
+                'export_timesheets',
+                'access_reports',
+                'set_up',
+                'kiosk',
+                'edit_locations',
+                'manage_integrations',
+            ],
+            "advisor" => [
+                'add_edit_team_members',
+                'view_team_member_costs',
+                'export_timesheets',
+                'access_reports',
+                'set_up',
+                'kiosk',
+                'edit_locations',
+                'manage_integrations',
+                'create_locations'
+            ],
+            "system_administrator" => $permission
+        ];
+
+
+
+        foreach ($roles as $roleName => $rolePermissions) {
+            $role = Role::firstOrCreate(['name' => $roleName]);
+            $role->syncPermissions($rolePermissions);
+        }
+
         $user = User::firstOrCreate([
             'email' => 'admin@example.com',
 
@@ -30,21 +116,8 @@ class PermissionSeeder extends Seeder
         ]);
 
         if ($user->wasRecentlyCreated) {
-            $roles = [
-                'admin' => ['View Users', 'Create Users', 'Edit Users', 'Delete Users', 'Manage Resources'],
-                'manager' => ['View Users', 'Create Users', 'Edit Users', 'Manage Resources'],
-                'user' => []
-            ];
-
-            foreach ($roles as $roleName => $permissions) {
-                $role = Role::firstOrCreate(['name' => $roleName]);
-
-                foreach ($permissions as $permissionName) {
-                    $permission = Permission::firstOrCreate(['name' => $permissionName]);
-                    $role->givePermissionTo($permission);
-                }
-            }
-            $user->assignRole('admin');
+            $user->assignRole('system_administrator');
         }
+        
     }
 }
