@@ -32,7 +32,6 @@ return new class extends Migration
             $table->string('emergency_contact_phone')->nullable();
             $table->date('termination_date')->nullable();
             $table->json('additional_locations')->nullable();
-            $table->string('role')->nullable();
             $table->string('stress_profile')->nullable();
             $table->date('hired_date')->nullable();
             $table->unsignedDecimal('base_rate', 8, 2)->default(0);

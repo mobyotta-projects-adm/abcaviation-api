@@ -53,28 +53,13 @@
             </div>
             <div class="form-group">
                 <label for="accessLevel">Access level</label>
+
                 <select class="form-control" id="accessLevel" wire:model="accessLevel">
                     <option value="">Select access level</option>
-                    <option>System Administrator</option>
-                    <option>Supervisor</option>
-                    <option>Employee</option>
-                    <option>DM</option>
-                    <option>Operations Manager</option>
-                    <option>SDM</option>
-                    <option>Mobilisation Lead</option>
-                    <option>LHR T/L</option>
-                    <option>Driver</option>
-                    <option>Operative</option>
-                    <option>Luton Van</option>
-                    <option>Tug</option>
-                    <option>Finance</option>
-                    <option>YVR Sr Supervisor</option>
-                    <option>YVR Team Leader</option>
-                    <option>H&S Coordinator</option>
-                    <option>Team Leader </option>
-                    <option>YVR Systems Admin</option>
-                    <option>YVR Payroll Admin</option>
-                    <option>Planning</option>
+                    @forelse ($this->roles as $item)
+                        <option value="{{ $item->name }}"> {{ print_role($item->name) }} </option>
+                    @empty
+                    @endforelse
                 </select>
                 <x-jet-input-error for="accessLevel" />
             </div>

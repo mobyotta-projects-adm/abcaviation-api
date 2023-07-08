@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\UserProfile;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class UsersDataTable extends DataTableComponent
 {
@@ -30,6 +31,7 @@ class UsersDataTable extends DataTableComponent
 
         $this->countryCodes = DashboardController::phoneNumberCodes();
         $this->locations = Location::all();
+        $this->roles = Role::all();
     }
 
     public function columns(): array
@@ -43,7 +45,9 @@ class UsersDataTable extends DataTableComponent
             Column::make("Email", "email")->sortable(),
             Column::make("Mobile", "profile.mobile")->sortable(),
             Column::make("Main Location", "profile.location.name")->sortable(),
-            Column::make("Access Level", "profile.role")->sortable(),
+            Column::make('Access Level', 'id')->format(function ($data, $user) {
+                return print_role($user->getRoleNames()[0]);
+            })->html(),
             Column::make('Actions', 'id')->format(function ($row) {
                 return '<a href="' . url('/user/edit/personal/' . $row) . '" class="btn border-0" ><i class="fa fa-edit text-primary" aria-hidden="true"></i> Personal</button>' .
                     '<a href="' . url('/user/edit/employment/' . $row) . '" class="btn border-0" ><i class="fa fa-edit text-primary" aria-hidden="true"></i> Employment</button>';
@@ -55,11 +59,7 @@ class UsersDataTable extends DataTableComponent
 
     public function builder(): Builder
     {
-        return $this->model::query()
-            ->whereHas("roles", function ($q) {
-                $q->where("name", "!=", "admin");
-            })
-            ->orWhereDoesntHave("roles");
+        return $this->model::query()->whereNot('users.id', auth()->id());
     }
 
     public $countryCodes = [];
@@ -67,6 +67,8 @@ class UsersDataTable extends DataTableComponent
     public $modalStatus = false;
     public $row;
 
+
+    public $roles = [];
 
     public $name;
     public $email;
@@ -115,9 +117,9 @@ class UsersDataTable extends DataTableComponent
             'dial_code' => $this->dial_code,
             'mobile' => $this->mobile,
             'location_id' => $this->mainLocation,
-            'role' => $this->accessLevel,
             'payroll_id' => null
         ]);
+        $user->assignRole($this->accessLevel);
 
         $this->closeModal();
     }

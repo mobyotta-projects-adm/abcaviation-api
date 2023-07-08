@@ -118,6 +118,5 @@ class PermissionSeeder extends Seeder
         if ($user->wasRecentlyCreated) {
             $user->assignRole('system_administrator');
         }
-        
     }
 }
