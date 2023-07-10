@@ -85,6 +85,7 @@ class PermissionSeeder extends Seeder
                 'manage_integrations',
             ],
             "advisor" => [
+                'view_shifts',
                 'add_edit_team_members',
                 'view_team_member_costs',
                 'export_timesheets',

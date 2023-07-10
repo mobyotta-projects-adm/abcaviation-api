@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Livewire\DataTables\LocationTable;
 use App\Http\Livewire\DataTables\UsersDataTable;
 use App\Http\Livewire\Pages\EditLocation;
+use App\Http\Livewire\Pages\EditUserEmployment;
 use App\Http\Livewire\Pages\EditUserPersonal;
 use Illuminate\Support\Facades\Route;
 
@@ -45,4 +46,5 @@ Route::middleware([
     Route::get('report', [DashboardController::class, 'report'])->name('report');
     Route::get('/location/edit/{location}', EditLocation::class)->name('editlocation');
     Route::get('/user/edit/personal/{user}', EditUserPersonal::class)->name('editUser');
+    Route::get('/user/edit/employment/{user}', EditUserEmployment::class)->name('editUser');
 });
