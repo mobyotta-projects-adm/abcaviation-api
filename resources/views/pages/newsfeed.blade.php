@@ -26,7 +26,7 @@
                         <ul class="list-unstyled mb-0">
                             <li>
                                 <a class="d-flex align-items-center text-muted text-hover-primary mb-2"
-                                    href="https://phoenixcoded.net/" target="_blank">
+                                    href="#" >
                                     <div class="avtar avtar-xs bg-light-secondary flex-shrink-0 me-2">
                                         <i class="material-icons-two-tone text-secondary f-16">quickreply</i>
                                     </div>
@@ -81,7 +81,7 @@
                         <ul class="list-unstyled mb-0">
                             <li>
                                 <a class="d-flex align-items-center text-muted text-hover-primary mb-2"
-                                    href="https://phoenixcoded.net/" target="_blank">
+                                    href="#" >
                                     <div class="avtar avtar-xs bg-light-secondary flex-shrink-0 me-2">
                                         <i class="material-icons-two-tone text-secondary f-16">location_on</i>
                                     </div>
